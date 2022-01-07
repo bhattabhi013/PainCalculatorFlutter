@@ -1,0 +1,130 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.package.pain_app"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="31" />
+10    <!--
+11         Flutter needs it to communicate with the running application
+12         to allow setting breakpoints, to provide hot reload, etc.
+13    -->
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->D:\Flutter_wspace\pain_app\android\app\src\debug\AndroidManifest.xml:6:5-66
+14-->D:\Flutter_wspace\pain_app\android\app\src\debug\AndroidManifest.xml:6:22-64
+15
+16    <queries>
+16-->[:flutter_tts] D:\Flutter_wspace\pain_app\build\flutter_tts\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-11:15
+17        <intent>
+17-->[:flutter_tts] D:\Flutter_wspace\pain_app\build\flutter_tts\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-10:18
+18            <action android:name="android.intent.action.TTS_SERVICE" />
+18-->[:flutter_tts] D:\Flutter_wspace\pain_app\build\flutter_tts\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-72
+18-->[:flutter_tts] D:\Flutter_wspace\pain_app\build\flutter_tts\intermediates\library_manifest\debug\AndroidManifest.xml:9:21-69
+19        </intent>
+20    </queries> <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+21    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+22    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+22-->[com.google.firebase:firebase-database:20.0.2] C:\Users\ABHISHEK\.gradle\caches\transforms-2\files-2.1\6fa87d7e7e7a079ffa2202b0069bc191\jetified-firebase-database-20.0.2\AndroidManifest.xml:25:5-79
+22-->[com.google.firebase:firebase-database:20.0.2] C:\Users\ABHISHEK\.gradle\caches\transforms-2\files-2.1\6fa87d7e7e7a079ffa2202b0069bc191\jetified-firebase-database-20.0.2\AndroidManifest.xml:25:22-76
+23
+24    <application
+25        android:name="android.app.Application"
+26        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+26-->[androidx.core:core:1.6.0] C:\Users\ABHISHEK\.gradle\caches\transforms-2\files-2.1\5f663b08eec19eef9a9d1af662d9025e\core-1.6.0\AndroidManifest.xml:24:18-86
+27        android:debuggable="true"
+28        android:icon="@mipmap/ic_launcher"
+29        android:label="pain_app" >
+30        <activity
+31            android:name="com.example.pain_app.MainActivity"
+32            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+33            android:exported="true"
+34            android:hardwareAccelerated="true"
+35            android:launchMode="singleTop"
+36            android:theme="@style/LaunchTheme"
+37            android:windowSoftInputMode="adjustResize" >
+38
+39            <!--
+40                 Specifies an Android theme to apply to this Activity as soon as
+41                 the Android process has started. This theme is visible to the user
+42                 while the Flutter UI initializes. After that, this theme continues
+43                 to determine the Window background behind the Flutter UI.
+44            -->
+45            <meta-data
+46                android:name="io.flutter.embedding.android.NormalTheme"
+47                android:resource="@style/NormalTheme" />
+48
+49            <intent-filter>
+50                <action android:name="android.intent.action.MAIN" />
+51
+52                <category android:name="android.intent.category.LAUNCHER" />
+53            </intent-filter>
+54        </activity>
+55        <!--
+56             Don't delete the meta-data below.
+57             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+58        -->
+59        <meta-data
+60            android:name="flutterEmbedding"
+61            android:value="2" />
+62
+63        <service
+63-->[:firebase_database] D:\Flutter_wspace\pain_app\build\firebase_database\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
+64            android:name="com.google.firebase.components.ComponentDiscoveryService"
+64-->[:firebase_database] D:\Flutter_wspace\pain_app\build\firebase_database\intermediates\library_manifest\debug\AndroidManifest.xml:8:18-89
+65            android:directBootAware="true"
+65-->[com.google.firebase:firebase-common:20.0.0] C:\Users\ABHISHEK\.gradle\caches\transforms-2\files-2.1\63bd66ee5f778cdf068b521e311bfeab\jetified-firebase-common-20.0.0\AndroidManifest.xml:35:13-43
+66            android:exported="false" >
+66-->[com.google.firebase:firebase-database:20.0.2] C:\Users\ABHISHEK\.gradle\caches\transforms-2\files-2.1\6fa87d7e7e7a079ffa2202b0069bc191\jetified-firebase-database-20.0.2\AndroidManifest.xml:31:13-37
+67            <meta-data
+67-->[:firebase_database] D:\Flutter_wspace\pain_app\build\firebase_database\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
+68                android:name="com.google.firebase.components:io.flutter.plugins.firebase.database.FlutterFirebaseAppRegistrar"
+68-->[:firebase_database] D:\Flutter_wspace\pain_app\build\firebase_database\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-127
+69                android:value="com.google.firebase.components.ComponentRegistrar" />
+69-->[:firebase_database] D:\Flutter_wspace\pain_app\build\firebase_database\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
+70            <meta-data
+70-->[:firebase_core] D:\Flutter_wspace\pain_app\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
+71                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+71-->[:firebase_core] D:\Flutter_wspace\pain_app\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-124
+72                android:value="com.google.firebase.components.ComponentRegistrar" />
+72-->[:firebase_core] D:\Flutter_wspace\pain_app\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
+73            <meta-data
+73-->[com.google.firebase:firebase-database:20.0.2] C:\Users\ABHISHEK\.gradle\caches\transforms-2\files-2.1\6fa87d7e7e7a079ffa2202b0069bc191\jetified-firebase-database-20.0.2\AndroidManifest.xml:32:13-34:85
+74                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+74-->[com.google.firebase:firebase-database:20.0.2] C:\Users\ABHISHEK\.gradle\caches\transforms-2\files-2.1\6fa87d7e7e7a079ffa2202b0069bc191\jetified-firebase-database-20.0.2\AndroidManifest.xml:33:17-109
+75                android:value="com.google.firebase.components.ComponentRegistrar" />
+75-->[com.google.firebase:firebase-database:20.0.2] C:\Users\ABHISHEK\.gradle\caches\transforms-2\files-2.1\6fa87d7e7e7a079ffa2202b0069bc191\jetified-firebase-database-20.0.2\AndroidManifest.xml:34:17-82
+76        </service>
+77
+78        <provider
+78-->[com.google.firebase:firebase-common:20.0.0] C:\Users\ABHISHEK\.gradle\caches\transforms-2\files-2.1\63bd66ee5f778cdf068b521e311bfeab\jetified-firebase-common-20.0.0\AndroidManifest.xml:26:9-31:39
+79            android:name="com.google.firebase.provider.FirebaseInitProvider"
+79-->[com.google.firebase:firebase-common:20.0.0] C:\Users\ABHISHEK\.gradle\caches\transforms-2\files-2.1\63bd66ee5f778cdf068b521e311bfeab\jetified-firebase-common-20.0.0\AndroidManifest.xml:27:13-77
+80            android:authorities="com.package.pain_app.firebaseinitprovider"
+80-->[com.google.firebase:firebase-common:20.0.0] C:\Users\ABHISHEK\.gradle\caches\transforms-2\files-2.1\63bd66ee5f778cdf068b521e311bfeab\jetified-firebase-common-20.0.0\AndroidManifest.xml:28:13-72
+81            android:directBootAware="true"
+81-->[com.google.firebase:firebase-common:20.0.0] C:\Users\ABHISHEK\.gradle\caches\transforms-2\files-2.1\63bd66ee5f778cdf068b521e311bfeab\jetified-firebase-common-20.0.0\AndroidManifest.xml:29:13-43
+82            android:exported="false"
+82-->[com.google.firebase:firebase-common:20.0.0] C:\Users\ABHISHEK\.gradle\caches\transforms-2\files-2.1\63bd66ee5f778cdf068b521e311bfeab\jetified-firebase-common-20.0.0\AndroidManifest.xml:30:13-37
+83            android:initOrder="100" />
+83-->[com.google.firebase:firebase-common:20.0.0] C:\Users\ABHISHEK\.gradle\caches\transforms-2\files-2.1\63bd66ee5f778cdf068b521e311bfeab\jetified-firebase-common-20.0.0\AndroidManifest.xml:31:13-36
+84
+85        <activity
+85-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\ABHISHEK\.gradle\caches\transforms-2\files-2.1\3379954b54da4c690bd742f1e4b2cf6f\jetified-play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
+86            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+86-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\ABHISHEK\.gradle\caches\transforms-2\files-2.1\3379954b54da4c690bd742f1e4b2cf6f\jetified-play-services-base-17.1.0\AndroidManifest.xml:24:13-79
+87            android:exported="false"
+87-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\ABHISHEK\.gradle\caches\transforms-2\files-2.1\3379954b54da4c690bd742f1e4b2cf6f\jetified-play-services-base-17.1.0\AndroidManifest.xml:25:13-37
+88            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+88-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\ABHISHEK\.gradle\caches\transforms-2\files-2.1\3379954b54da4c690bd742f1e4b2cf6f\jetified-play-services-base-17.1.0\AndroidManifest.xml:26:13-72
+89
+90        <meta-data
+90-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\ABHISHEK\.gradle\caches\transforms-2\files-2.1\3c8e7eb3d21ac94d08f658f6d8a1c9f3\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+91            android:name="com.google.android.gms.version"
+91-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\ABHISHEK\.gradle\caches\transforms-2\files-2.1\3c8e7eb3d21ac94d08f658f6d8a1c9f3\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+92            android:value="@integer/google_play_services_version" />
+92-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\ABHISHEK\.gradle\caches\transforms-2\files-2.1\3c8e7eb3d21ac94d08f658f6d8a1c9f3\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+93    </application>
+94
+95</manifest>
