@@ -48,6 +48,6 @@ class EmojiWidget extends StatelessWidget {
       return const Text("");
     }
 
-    return getWidget();
+    return Container(padding: EdgeInsets.all(10), child: getWidget());
   }
 }

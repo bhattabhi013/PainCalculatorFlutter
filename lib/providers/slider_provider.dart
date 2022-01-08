@@ -38,6 +38,20 @@ class SliderProvider with ChangeNotifier {
     }
   }
 
+  fontWeight(int val) {
+    if (val == _value) {
+      return FontWeight.bold;
+    }
+    return FontWeight.normal;
+  }
+
+  fontSize(int val) {
+    if (val == _value) {
+      return 40.0;
+    }
+    return 16.0;
+  }
+
   Future<void> submitResponse() async {
     DatabaseReference ref = FirebaseDatabase.instance.ref("userResponse");
     await ref.set({"score": scoreListResp, "value": _value});

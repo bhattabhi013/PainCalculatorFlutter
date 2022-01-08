@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pain_app/widgets/slider_range_widget.dart';
 
 import 'button_widget.dart';
 import 'emoji_widget.dart';
@@ -17,6 +18,7 @@ class MainBody extends StatelessWidget {
       ),
       child: Container(
         width: double.infinity,
+        color: Colors.white,
         height: MediaQuery.of(context).size.height * 0.80,
         padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 15),
         // color: Colors.black12,
@@ -41,12 +43,13 @@ class MainBody extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.20,
+              height: MediaQuery.of(context).size.height * 0.10,
             ),
             const EmojiWidget(),
+            const SLiderRangeWidget(),
             const SLiderWIdget(),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.10,
+              height: MediaQuery.of(context).size.height * 0.05,
             ),
             const TextValue(),
             SizedBox(
