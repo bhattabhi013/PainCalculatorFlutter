@@ -14,7 +14,7 @@ class SliderProvider with ChangeNotifier {
   getScoresFromFirebase() async {
     DatabaseReference ref = FirebaseDatabase.instance.ref("scores");
     DatabaseEvent event = await ref.once();
-    print(event.snapshot.value);
+    // print(event.snapshot.value);
     _scoreList = event.snapshot.value as List;
   }
 

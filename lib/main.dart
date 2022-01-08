@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter_tts/flutter_tts.dart';
-import 'package:pain_app/widgets/textvalue.dart';
 import 'package:provider/provider.dart';
 import 'firebase_options.dart';
 
 import '../providers/slider_provider.dart';
-import 'widgets/button_widget.dart';
-import 'widgets/slider_widget.dart';
+import 'widgets/main_body.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -31,13 +28,15 @@ class PainApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         debugShowCheckedModeBanner: false,
-        home: Home(),
+        home: const Home(),
       ),
     );
   }
 }
 
 class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     double _value = 0.0;
@@ -45,57 +44,36 @@ class Home extends StatelessWidget {
       // appBar: AppBar(
       //   title: Text("Pain App"),
       // )
-      body: Container(
-        height: 300,
+      body: SizedBox(
+        width: double.infinity,
+        height: MediaQuery.of(context).size.height * 1,
         child: Column(
           children: [
-            // SizedBox(
-            //   height: 30,
-            // ),
-            Expanded(
-              child: Container(
-                width: double.infinity,
-                color: Colors.teal[300],
-                padding: const EdgeInsets.symmetric(
-                    vertical: 20.0, horizontal: 10.0),
-                child: const Text(
-                  'You have 2 more sessions today',
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                ),
+            Container(
+              width: double.infinity,
+              height: MediaQuery.of(context).size.height * 0.2,
+              color: Colors.teal[300],
+              child: Column(
+                children: [
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.1,
+                  ),
+                  Container(
+                    alignment: Alignment.topLeft,
+                    padding: const EdgeInsets.all(10),
+                    child: const Text(
+                      'You have 2 more sessions today',
+                      softWrap: true,
+                      style: TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
-            ClipRRect(
-              borderRadius: const BorderRadius.only(
-                topLeft: Radius.circular(20),
-                topRight: Radius.circular(20),
-              ),
-              child: Container(
-                width: double.infinity,
-                color: Colors.black12,
-                child: Column(
-                  children: [
-                    const SizedBox(
-                      height: 50,
-                    ),
-                    const Text(
-                      'Pain Score',
-                      style:
-                          TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                    ),
-                    const Text(
-                      'How does your knee feel now?',
-                      style: TextStyle(fontSize: 18),
-                    ),
-                    const Text(
-                      'for emoji',
-                    ),
-                    const SLiderWIdget(),
-                    TextValue(),
-                    ButtonWidget()
-                  ],
-                ),
-              ),
-            )
+            const MainBody(),
           ],
         ),
       ),

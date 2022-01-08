@@ -13,7 +13,7 @@ class TextValue extends StatelessWidget {
         style: const TextStyle(
           color: Colors.green,
           fontWeight: FontWeight.bold,
-          fontSize: 18,
+          fontSize: 20,
         ),
       ),
     );

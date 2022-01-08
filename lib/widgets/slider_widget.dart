@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pain_app/model/slider_model.dart';
 import 'package:pain_app/providers/slider_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -13,7 +12,6 @@ class SLiderWIdget extends StatelessWidget {
           activeTrackColor: Colors.white,
           trackHeight: 20,
           // thumbShape: SliderComponentShape.noThumb,
-          //tickMarkShape: const LineSliderTickMarkShape(),
           inactiveTrackColor: Colors.white,
           activeTickMarkColor: Colors.tealAccent),
       child: Consumer<SliderProvider>(
